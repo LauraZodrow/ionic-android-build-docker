@@ -54,7 +54,7 @@ RUN curl -sSL http://dl.google.com/android/android-sdk_r${ANDROID_SDK_VERSION}-l
 # RUN android-sdk-install tools
 
 # android sdk components
-ENV ANDROID_CORE_LEVEL      23
+ENV ANDROID_CORE_LEVEL      24
 ENV ANDROID_BUILD_TOOLS     23.0.3
 ENV ANDROID_API_LEVELS      android-${ANDROID_CORE_LEVEL}
 ENV ANDROID_GOOGLE_APIS     addon-google_apis-google-${ANDROID_CORE_LEVEL}
@@ -87,7 +87,7 @@ ENV SUPPLY_VERSION          0.6.2
 RUN gem install --no-ri --no-rdoc supply -v ${SUPPLY_VERSION}
 
 # install node
-ENV NODE_VERSION            5.10.1
+ENV NODE_VERSION            6.10.0
 RUN curl -sSLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
     && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
     && rm "node-v$NODE_VERSION-linux-x64.tar.gz"
